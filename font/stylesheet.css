@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'kingred';
+    src: url('kingred.woff2') format('woff2'),
+        url('kingred.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

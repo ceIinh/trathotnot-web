@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="/img/Logo.jpg">
     <title>Trà Thốt Nốt - Thanh mát từ thiên nhiên | Nguồn gốc tự nhiên 100%</title>
     <meta name="description" content="Trà Thốt Nốt thuần khiết từ miền Tây Nam Bộ. 100% tự nhiên, không hóa chất, giàu vitamin và khoáng chất. Giao hàng toàn quốc.">
     <meta name="keywords" content="trà thốt nốt, trà tự nhiên, trà miền tây, thức uống healthy, trà việt nam">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
@@ -25,8 +28,7 @@
 
         /* Enhanced Header with backdrop blur */
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
+            background: #387C01;
             padding: 0.8rem 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             position: fixed;
@@ -48,39 +50,55 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             cursor: pointer;
+            position: relative;
         }
 
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        .logo img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            animation: leafFloat 3s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(56, 124, 1, 0.7), 0 0 25px rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+            border: 3px solid #FFEB3B;
         }
 
-        .logo:hover .logo-icon {
-            transform: rotate(15deg) scale(1.1);
+        .logo:hover img {
+            transform: scale(1.2) rotate(20deg);
+            box-shadow: 0 0 25px rgba(56, 124, 1, 0.9), 0 0 40px rgba(255, 255, 255, 0.5);
         }
 
-        @keyframes leafFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-3px) rotate(2deg); }
+        .logo::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,235,59,0.2), transparent);
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 0.2; }
+            100% { transform: scale(1); opacity: 0.5; }
         }
 
         .brand-name {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            color: #2E7D32;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            color: #FFEB3B;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .brand-name {
+            color: #ffffff;
+            transform: translateY(-2px);
         }
 
         .nav-menu {
@@ -91,7 +109,7 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: #333333;
+            color: #ffffff;
             font-weight: 500;
             font-size: 16px;
             transition: all 0.3s;
@@ -105,12 +123,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
             transition: width 0.3s ease;
         }
 
         .nav-menu a:hover {
-            color: #4CAF50;
+            color: #FFEB3B;
         }
 
         .nav-menu a:hover:before {
@@ -120,8 +138,6 @@
         /* Enhanced Hero with animated gradient */
         .hero {
             height: 90vh;
-            background: linear-gradient(135deg, rgba(46,125,50,0.9), rgba(76,175,80,0.8), rgba(139,195,74,0.7)),
-            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="leaves" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="20" cy="20" r="3" fill="%23fff" opacity="0.1"/><circle cx="80" cy="40" r="2" fill="%23fff" opacity="0.1"/><circle cx="40" cy="80" r="2.5" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="800" fill="url(%23leaves)"/></svg>');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -142,7 +158,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
             animation: shimmer 3s linear infinite;
         }
 
@@ -160,7 +175,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
             margin-bottom: 1rem;
-            color: #ffffff;
+            color:#387c01;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
             font-weight: 700;
             animation: fadeInUp 1.2s ease-out;
@@ -171,6 +186,7 @@
             margin-bottom: 2rem;
             max-width: 700px;
             line-height: 1.7;
+            color:#387c01;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
             animation: fadeInUp 1.2s ease-out 0.3s both;
         }
@@ -187,8 +203,8 @@
         }
 
         .cta-button {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
-            color: white;
+            background: linear-gradient(135deg, #ffffff, #e0e0e0);
+            color: #387C01;
             padding: 18px 40px;
             border: none;
             border-radius: 30px;
@@ -198,14 +214,14 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 8px 25px rgba(76,175,80,0.3);
+            box-shadow: 0 8px 25px rgba(56,124,1,0.3);
             animation: fadeInUp 1.2s ease-out 0.6s both;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(76,175,80,0.4);
-            background: linear-gradient(135deg, #45a049, #4CAF50);
+            box-shadow: 0 12px 35px rgba(56,124,1,0.4);
+            background: linear-gradient(135deg, #e0e0e0, #ffffff);
         }
 
         /* Section styling */
@@ -234,7 +250,7 @@
             right: -20%;
             width: 40%;
             height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q50,10 80,20 Q90,50 80,80 Q50,90 20,80 Q10,50 20,20" fill="%234CAF50" opacity="0.05"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q50,10 80,20 Q90,50 80,80 Q50,90 20,80 Q10,50 20,20" fill="%23387C01" opacity="0.05"/></svg>');
             transform: rotate(15deg);
         }
 
@@ -262,7 +278,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            background: linear-gradient(135deg, #387C01, #4A9C01);
         }
 
         .mission-card:hover, .vision-card:hover {
@@ -273,7 +289,7 @@
         .mission-card h3, .vision-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            color: #2E7D32;
+            color: #387C01;
             margin-bottom: 1rem;
             position: relative;
         }
@@ -285,11 +301,11 @@
             left: 0;
             width: 50px;
             height: 3px;
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            background: linear-gradient(135deg, #387C01, #4A9C01);
             border-radius: 2px;
         }
 
-        /* Origin Section */
+        /* Origin Section - Updated with FPT Can Tho Map */
         .origin {
             background: #ffffff;
             position: relative;
@@ -305,53 +321,31 @@
         .origin-map {
             width: 100%;
             height: 380px;
-            background: linear-gradient(135deg, #4CAF50, #8D6E63, #66BB6A);
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
             position: relative;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
 
-        .origin-map:before {
-            content: '🗺️';
-            position: absolute;
-            top: 20%;
-            left: 20%;
-            font-size: 2rem;
-            opacity: 0.7;
-        }
-
-        .origin-map:after {
-            content: '📍';
-            position: absolute;
-            bottom: 30%;
-            right: 25%;
-            font-size: 2.5rem;
-            color: #FFEB3B;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        .origin-map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 20px;
         }
 
         .map-label {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255,255,255,0.9);
-            color: #2E7D32;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 1rem;
+            top: 10px;
+            left: 10px;
+            background: rgba(255,255,255,0.95);
+            color: #387C01;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
             font-weight: 600;
+            z-index: 1;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         /* Enhanced Story Section */
@@ -369,7 +363,7 @@
         .story-image {
             width: 100%;
             height: 350px;
-            background: linear-gradient(135deg, #4CAF50, #8D6E63);
+            background: linear-gradient(135deg, #387C01, #8D6E63);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -406,7 +400,7 @@
 
         .story-text h2 {
             font-family: 'Playfair Display', serif;
-            color: #4CAF50;
+            color: #387C01;
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             font-weight: 600;
@@ -427,7 +421,7 @@
         .section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
-            color: #2E7D32;
+            color: #387C01;
             font-size: 2.5rem;
             margin-bottom: 2rem;
             font-weight: 600;
@@ -458,7 +452,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(76,175,80,0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(56,124,1,0.1), transparent);
             transition: left 0.5s;
         }
 
@@ -474,7 +468,7 @@
         .highlight-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            background: linear-gradient(135deg, #387C01, #4A9C01);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -490,7 +484,7 @@
         }
 
         .highlight-box h3 {
-            color: #2E7D32;
+            color: #387C01;
             margin-bottom: 0.8rem;
             font-size: 1.3rem;
             font-weight: 600;
@@ -528,7 +522,7 @@
             top: -10px;
             left: 20px;
             font-size: 4rem;
-            color: #4CAF50;
+            color: #387C01;
             opacity: 0.3;
             font-family: serif;
         }
@@ -550,7 +544,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            background: linear-gradient(135deg, #387C01, #4A9C01);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -560,7 +554,7 @@
         }
 
         .author-info h4 {
-            color: #2E7D32;
+            color: #387C01;
             margin-bottom: 0.2rem;
         }
 
@@ -597,7 +591,7 @@
         .benefit-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            background: linear-gradient(135deg, #387C01, #4A9C01);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -634,7 +628,7 @@
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: #2E7D32;
+            color: #387C01;
             font-weight: 600;
         }
 
@@ -651,12 +645,12 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #4CAF50;
-            box-shadow: 0 0 0 3px rgba(76,175,80,0.1);
+            border-color: #387C01;
+            box-shadow: 0 0 0 3px rgba(56,124,1,0.1);
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
+            background: linear-gradient(135deg, #387C01, #2E6B01);
             color: white;
             padding: 15px 40px;
             border: none;
@@ -670,12 +664,12 @@
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(76,175,80,0.3);
+            box-shadow: 0 8px 25px rgba(56,124,1,0.3);
         }
 
         /* Enhanced Footer */
         .footer {
-            background: linear-gradient(135deg, #2E7D32, #1B5E20);
+            background: linear-gradient(135deg, #387C01, #2E6B01);
             color: white;
             padding: 3rem 0 1.5rem;
             position: relative;
@@ -689,7 +683,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,80 Q30,70 40,80 T60,80 T80,80" stroke="%234CAF50" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,80 Q30,70 40,80 T60,80 T80,80" stroke="%23387C01" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
             background-size: 200px 100px;
         }
 
@@ -708,16 +702,18 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.3rem;
         }
+
         .footer-section a {
-            text-decoration: none;   /* bỏ gạch chân */
-            color: #ffffff;          /* cho link màu trắng (vì footer nền xanh) */
-            transition: color 0.3s;  /* hiệu ứng đổi màu mượt */
+            text-decoration: none;
+            color: #ffffff;
+            transition: color 0.3s;
         }
 
         .footer-section a:hover {
-            color: #FFEB3B;          /* khi hover đổi sang vàng nhạt nổi bật */
-            text-decoration: underline; /* nếu thích thì cho underline khi hover */
+            color: #FFEB3B;
+            text-decoration: underline;
         }
+
         .social-icons {
             display: flex;
             gap: 1rem;
@@ -739,7 +735,7 @@
 
         .social-icon:hover {
             background: #FFEB3B;
-            color: #2E7D32;
+            color: #387C01;
             transform: translateY(-3px);
         }
 
@@ -758,7 +754,7 @@
             background: none;
             border: none;
             font-size: 1.8rem;
-            color: #4CAF50;
+            color: #ffffff;
             cursor: pointer;
             transition: all 0.3s;
         }
@@ -773,8 +769,7 @@
             top: 100%;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
+            background: rgba(56, 124, 1, 0.95);
             box-shadow: 0 5px 25px rgba(0,0,0,0.15);
             z-index: 999;
             border-radius: 0 0 15px 15px;
@@ -802,21 +797,21 @@
         }
 
         .mobile-menu li {
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .mobile-menu a {
             display: block;
             padding: 1rem 2rem;
             text-decoration: none;
-            color: #333333;
+            color: #ffffff;
             font-weight: 500;
             transition: all 0.3s;
         }
 
         .mobile-menu a:hover {
-            background: rgba(76,175,80,0.1);
-            color: #4CAF50;
+            background: rgba(255,255,255,0.1);
+            color: #FFEB3B;
             padding-left: 2.5rem;
         }
 
@@ -888,13 +883,12 @@
             }
 
             .brand-name {
-                font-size: 22px;
+                font-size: 24px;
             }
 
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
+            .logo img {
+                width: 55px;
+                height: 55px;
             }
 
             /* Hero Mobile */
@@ -959,6 +953,11 @@
             .origin-map {
                 height: 280px;
                 order: -1;
+            }
+
+            .map-label {
+                font-size: 0.8rem;
+                padding: 8px 12px;
             }
 
             /* Story Mobile */
@@ -1134,6 +1133,19 @@
             .form-container {
                 padding: 1.2rem;
             }
+
+            .origin-map {
+                height: 250px;
+            }
+
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .brand-name {
+                font-size: 22px;
+            }
         }
 
         /* Touch-friendly improvements */
@@ -1166,8 +1178,8 @@
 <header class="header">
     <nav class="nav-container">
         <div class="logo">
-            <div class="logo-icon">🍃</div>
-            <div class="brand-name">Trà Thốt Nốt</div>
+            <img src="/img/Logo.jpg" alt="Logo" width="70">
+            <span class="brand-name">Trà Thốt Nốt</span>
         </div>
         <ul class="nav-menu">
             <li><a href="#home">Trang chủ</a></li>
@@ -1220,32 +1232,29 @@
     </div>
 </section>
 
-<!-- Origin Section -->
+<!-- Origin Section - Updated with FPT Can Tho Map -->
 <section class="section origin">
     <div class="container">
         <h2 class="section-title fade-in">Nguồn Gốc Nguyên Liệu</h2>
         <div class="origin-content">
             <div class="origin-map slide-in-left">
-                <span style="font-size: 1.8rem; text-align: center; line-height: 1.4;">
-                    Vùng Đồng Bằng<br>
-                    Sông Cửu Long
-                </span>
-                <div class="map-label">Miền Tây Nam Bộ - Việt Nam</div>
+                <div class="map-label">📍 FPT Cần Thơ<br>Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần Thơ</div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="slide-in-right">
-                <h3 style="font-family: 'Playfair Display', serif; color: #2E7D32; font-size: 2rem; margin-bottom: 1.2rem;">🌍 Vùng Đất Phù Sa Màu Mỡ</h3>
+                <h3 style="font-family: 'Playfair Display', serif; color: #387C01; font-size: 2rem; margin-bottom: 1.2rem;">🌍 Vùng Đất Phù Sa Màu Mỡ</h3>
                 <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
                     Trà Thốt Nốt của chúng tôi có nguồn gốc từ những vùng đất phù sa màu mỡ nhất của đồng bằng sông Cửu Long. Nơi đây, khí hậu nhiệt đới ẩm, độ ẩm cao và nguồn nước ngọt dồi dào tạo nên điều kiện lý tưởng cho cây thốt nốt phát triển.
                 </p>
                 <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
                     Chúng tôi hợp tác trực tiếp với các gia đình nông dân địa phương có nhiều thế hệ kinh nghiệm trồng và chăm sóc cây thốt nốt. Mỗi cây thốt nốt được chọn lọc kỹ càng, chỉ thu hoạch khi đạt độ chín tối ưu.
                 </p>
-                <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 15px; border-left: 4px solid #4CAF50;">
-                    <h4 style="color: #2E7D32; margin-bottom: 0.8rem;">📍 Khu vực thu hoạch chính:</h4>
+                <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 15px; border-left: 4px solid #387C01;">
+                    <h4 style="color: #387C01; margin-bottom: 0.8rem;">📍 Khu vực thu hoạch chính:</h4>
                     <ul style="color: #666; line-height: 1.5;">
-                        <li>Cần Thơ - Trung tâm đồng bằng sông Cửu Long</li>
-                        <li>An Giang - Vùng đất trù phú, khí hậu ổn định</li>
-                        <li>Kiên Giang - Gần biển, độ mặn phù hợp</li>
+                        <li>Cần Thơ - Trung tâm đồng bằng sông Cửu Long, gần FPT</li>
+                        <li>An Giang - Vùng đất trù phú, gần FPT Can Tho</li>
+                        <li>Kiên Giang - Gần biển, gần FPT Can Tho</li>
                     </ul>
                 </div>
             </div>
@@ -1263,9 +1272,7 @@
             <div class="story-text slide-in-right">
                 <h2>Hành trình của Trà Thốt Nốt</h2>
                 <p>Từ những vùng đất phù sa màu mỡ của miền Tây Nam Bộ, nơi những cây thốt nốt cao vút vươn mình trong nắng vàng và gió mát, chúng tôi mang đến cho bạn sản phẩm trà thốt nốt thuần khiết nhất.</p>
-
                 <p>Thốt nốt không chỉ là một loại cây quen thuộc của người dân miền Tây, mà còn là báu vật thiên nhiên với nhiều giá trị dinh dưỡng quý báu. Sự lựa chọn thốt nốt làm nguyên liệu chính xuất phát từ tình yêu với thiên nhiên sạch và mong muốn mang lại sức khỏe tối ưu cho mọi người.</p>
-
                 <p>Chúng tôi tin rằng, mỗi tách trà không chỉ là thức uống giải khát, mà là cầu nối giữa con người với thiên nhiên, là khoảnh khắc bình yên trong cuộc sống hối hả, và là sự gắn kết ấm áp giữa những người thân yêu.</p>
             </div>
         </div>
@@ -1419,9 +1426,9 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Liên Hệ</h3>
-                <p>📍 Địa chỉ: Cần Thơ, Việt Nam</p>
+                <p>📍 Địa chỉ: FPT Cần Thơ, Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần Thơ</p>
                 <p>📞 Điện thoại: 0123 456 789</p>
-                <p>✉️ Email: info@trathornot.vn</p>
+                <p>✉️ Email: info@trathotnot.vn</p>
                 <p>🕒 Giờ làm việc: 8:00 - 17:00 (Thứ 2 - Chủ nhật)</p>
             </div>
             <div class="footer-section">
@@ -1443,10 +1450,10 @@
             </div>
             <div class="footer-section">
                 <h3>Bản Đồ Cửa Hàng</h3>
-                <div style="width: 100%; height: 120px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); margin-bottom: 1rem;">
-                    🗺️ Google Maps
+                <div style="width: 100%; height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 1rem;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <p>Ghé thăm cửa hàng của chúng tôi để trải nghiệm trực tiếp!</p>
+                <p>Ghé thăm cửa hàng của chúng tôi tại Đại học FPT Cần Thơ để trải nghiệm trực tiếp!</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -1486,361 +1493,33 @@
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = target.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
 
-    // Enhanced Animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+    // Animation on scroll
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
-
-    // Observe all animation elements
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-        observer.observe(el);
+    }, {
+        threshold: 0.1
     });
 
-    // Header background change on scroll
-    let lastScrollY = window.scrollY;
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        const currentScrollY = window.scrollY;
-
-        if (currentScrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(20px)';
-            header.style.boxShadow = '0 5px 25px rgba(0,0,0,0.15)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(15px)';
-            header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-        }
-
-        // Hide/show header on scroll
-        if (currentScrollY > lastScrollY && currentScrollY > 200) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
-        lastScrollY = currentScrollY;
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
+        observer.observe(element);
     });
 
-    // Contact form handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
+    // Form submission (basic example)
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const phone = formData.get('phone');
-        const message = formData.get('message');
-
-        // Simple validation
-        if (!name || !email || !message) {
-            alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
-            return;
-        }
-
-        // Simulate form submission
-        const submitBtn = this.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Đang gửi...';
-        submitBtn.disabled = true;
-
-        setTimeout(() => {
-            alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong vòng 24h.');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+        this.reset();
     });
-
-    // Add loading animation to images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-    });
-
-    // Parallax effect for hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero && scrolled < hero.offsetHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-
-    // Add hover effects to cards
-    const cards = document.querySelectorAll('.highlight-box, .benefit-item, .testimonial-card, .mission-card, .vision-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-
-    // Logo animation on click
-    document.querySelector('.logo').addEventListener('click', function() {
-        const icon = this.querySelector('.logo-icon');
-        icon.style.animation = 'none';
-        setTimeout(() => {
-            icon.style.animation = 'leafFloat 1s ease-in-out';
-        }, 100);
-    });
-
-    // Add typing effect to hero text (optional enhancement)
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.innerHTML = '';
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
-    }
-
-    // Initialize typing effect after page load
-    window.addEventListener('load', () => {
-        const heroSubtext = document.querySelector('.hero-content p');
-        if (heroSubtext) {
-            const originalText = heroSubtext.textContent;
-            setTimeout(() => {
-                typeWriter(heroSubtext, originalText, 30);
-            }, 1500);
-        }
-    });
-
-    // Add click ripple effect to buttons
-    function createRipple(event) {
-        const button = event.currentTarget;
-        const circle = document.createElement('span');
-        const diameter = Math.max(button.clientWidth, button.clientHeight);
-        const radius = diameter / 2;
-
-        circle.style.width = circle.style.height = `${diameter}px`;
-        circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-        circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-        circle.classList.add('ripple');
-
-        const ripple = button.getElementsByClassName('ripple')[0];
-        if (ripple) {
-            ripple.remove();
-        }
-
-        button.appendChild(circle);
-    }
-
-    // Apply ripple effect to buttons
-    document.querySelectorAll('.cta-button, .submit-btn').forEach(button => {
-        button.addEventListener('click', createRipple);
-    });
-
-    // Add CSS for ripple effect
-    const style = document.createElement('style');
-    style.textContent = `
-        .cta-button, .submit-btn {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.6);
-            transform: scale(0);
-            animation: rippleEffect 0.6s linear;
-            pointer-events: none;
-        }
-
-        @keyframes rippleEffect {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-
-        /* Additional smooth transitions */
-        .highlight-box, .benefit-item, .testimonial-card, .mission-card, .vision-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Loading spinner for form submission */
-        .submit-btn:disabled {
-            background: #ccc !important;
-            cursor: not-allowed;
-        }
-
-        .submit-btn:disabled:after {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border: 2px solid #fff;
-            border-top: 2px solid transparent;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-left: 10px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Enhance focus states for accessibility */
-        .form-group input:focus,
-        .form-group textarea:focus {
-            transform: translateY(-2px);
-            box-shadow: 0 0 0 3px rgba(76,175,80,0.1), 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Smooth page transitions */
-        body {
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        /* Print styles */
-        @media print {
-            .header, .footer, .mobile-menu, .cta-button, .submit-btn {
-                display: none !important;
-            }
-
-            body {
-                font-size: 12pt;
-                line-height: 1.5;
-            }
-
-            .section {
-                padding: 20px 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Performance optimization: Lazy loading for background images
-    const lazyBackgrounds = document.querySelectorAll('.hero, .story-image, .origin-map');
-    const backgroundObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('loaded');
-                backgroundObserver.unobserve(entry.target);
-            }
-        });
-    });
-
-    lazyBackgrounds.forEach(bg => {
-        backgroundObserver.observe(bg);
-    });
-
-    // Add smooth page entry animation
-    window.addEventListener('load', () => {
-        document.body.style.opacity = '1';
-
-        // Stagger animation for hero content
-        const heroElements = document.querySelectorAll('.hero-content > *');
-        heroElements.forEach((element, index) => {
-            element.style.animationDelay = `${index * 0.3}s`;
-        });
-    });
-
-    // Enhanced scroll to top functionality
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
-    scrollToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #4CAF50, #45a049);
-        color: white;
-        border: none;
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 5px 15px rgba(76,175,80,0.3);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 1000;
-    `;
-
-    document.body.appendChild(scrollToTopBtn);
-
-    // Show/hide scroll to top button
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.style.opacity = '1';
-            scrollToTopBtn.style.visibility = 'visible';
-        } else {
-            scrollToTopBtn.style.opacity = '0';
-            scrollToTopBtn.style.visibility = 'hidden';
-        }
-    });
-
-    // Scroll to top functionality
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Add loading state to page
-    document.addEventListener('DOMContentLoaded', () => {
-        // Remove loading class if exists
-        document.body.classList.remove('loading');
-
-        // Initialize all animations
-        const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-        animatedElements.forEach(element => {
-            element.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-    });
-
-    // Add error handling for images
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('error', function() {
-            this.style.display = 'none';
-        });
-    });
-
-    // Social media click handlers (placeholder)
-    document.querySelectorAll('.social-icon').forEach(icon => {
-        icon.addEventListener('click', function() {
-            const title = this.getAttribute('title');
-            alert(`Đang chuyển hướng đến ${title}...`);
-            // In a real implementation, you would add actual social media links here
-        });
-    });
-
-    console.log('🌿 Trà Thốt Nốt website loaded successfully!');
 </script>
 </body>
 </html>
