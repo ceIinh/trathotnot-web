@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="vi">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpg" href="img/logo2.png">
     <title>PAMI TEA - Thanh mát từ thiên nhiên | Nguồn gốc tự nhiên 100%</title>
-    <meta name="description" content="PAMI TEA thuần khiết từ miền Tây Nam Bộ. 100% tự nhiên, không hóa chất, giàu probiotics và dưỡng chất. Giao hàng toàn quốc.">
+    <meta name="description"
+        content="PAMI TEA thuần khiết từ miền Tây Nam Bộ. 100% tự nhiên, không hóa chất, giàu probiotics và dưỡng chất. Giao hàng toàn quốc.">
     <meta name="keywords" content="pami tea, trà lên men thốt nốt, trà tự nhiên, thức uống healthy, trà việt nam">
     <link rel="stylesheet" href="font/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
 
         body {
             font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,17 +32,19 @@
             overflow-x: hidden;
         }
 
+
         /* Enhanced Header with backdrop blur */
         .header {
             background: #387C01;
             padding: 0.8rem 0;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: all 0.3s ease;
         }
+
 
         .nav-container {
             max-width: 1200px;
@@ -47,6 +55,7 @@
             padding: 0 2rem;
         }
 
+
         .logo {
             display: flex;
             align-items: center;
@@ -54,6 +63,7 @@
             cursor: pointer;
             position: relative;
         }
+
 
         .logo img {
             width: 70px;
@@ -65,10 +75,12 @@
             border: 3px solid #FFEB3B;
         }
 
+
         .logo:hover img {
             transform: scale(1.2) rotate(20deg);
             box-shadow: 0 0 25px rgba(56, 124, 1, 0.9), 0 0 40px rgba(255, 255, 255, 0.5);
         }
+
 
         .logo::after {
             content: '';
@@ -76,36 +88,54 @@
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,235,59,0.2), transparent);
+            background: radial-gradient(circle, rgba(255, 235, 59, 0.2), transparent);
             z-index: -1;
             animation: pulse 2s infinite;
         }
 
+
         @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.3); opacity: 0.2; }
-            100% { transform: scale(1); opacity: 0.5; }
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+
+            50% {
+                transform: scale(1.3);
+                opacity: 0.2;
+            }
+
+
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
         }
+
 
         .brand-name {
             font-family: 'Playfair Display', serif;
             font-size: 28px;
             font-weight: 700;
             color: #FFEB3B;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
+
 
         .logo:hover .brand-name {
             color: #ffffff;
             transform: translateY(-2px);
         }
 
+
         .nav-menu {
             display: flex;
             list-style: none;
             gap: 2.5rem;
         }
+
 
         .nav-menu a {
             text-decoration: none;
@@ -115,6 +145,7 @@
             transition: all 0.3s;
             position: relative;
         }
+
 
         .nav-menu a:before {
             content: '';
@@ -127,13 +158,16 @@
             transition: width 0.3s ease;
         }
 
+
         .nav-menu a:hover {
             color: #FFEB3B;
         }
 
+
         .nav-menu a:hover:before {
             width: 100%;
         }
+
 
         /* Enhanced Hero with animated gradient */
         .hero {
@@ -151,6 +185,7 @@
             overflow: hidden;
         }
 
+
         .hero:before {
             content: '';
             position: absolute;
@@ -161,46 +196,60 @@
             animation: shimmer 3s linear infinite;
         }
 
+
         @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+
+            100% {
+                transform: translateX(100%);
+            }
         }
+
 
         .hero-content {
             position: relative;
             z-index: 2;
         }
 
+
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
             margin-bottom: 1rem;
-            color:#387c01;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            color: #387c01;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
             font-weight: 700;
             animation: fadeInUp 1.2s ease-out;
         }
+
 
         .hero-content p {
             font-size: 1.4rem;
             margin-bottom: 2rem;
             max-width: 700px;
             line-height: 1.7;
-            color:#387c01;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            color: #387c01;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             animation: fadeInUp 1.2s ease-out 0.3s both;
         }
+
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(50px);
             }
+
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
 
         .cta-button {
             background: linear-gradient(135deg, #ffffff, #e0e0e0);
@@ -214,15 +263,17 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 8px 25px rgba(56,124,1,0.3);
+            box-shadow: 0 8px 25px rgba(56, 124, 1, 0.3);
             animation: fadeInUp 1.2s ease-out 0.6s both;
         }
 
+
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(56,124,1,0.4);
+            box-shadow: 0 12px 35px rgba(56, 124, 1, 0.4);
             background: linear-gradient(135deg, #e0e0e0, #ffffff);
         }
+
 
         /* Section styling */
         .section {
@@ -230,11 +281,13 @@
             position: relative;
         }
 
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+
 
         /* Mission & Vision Section */
         .mission-vision {
@@ -242,6 +295,7 @@
             position: relative;
             overflow: hidden;
         }
+
 
         .mission-vision:before {
             content: '';
@@ -254,6 +308,7 @@
             transform: rotate(15deg);
         }
 
+
         .mission-vision-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -261,17 +316,21 @@
             align-items: center;
         }
 
-        .mission-card, .vision-card {
+
+        .mission-card,
+        .vision-card {
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .mission-card:before, .vision-card:before {
+
+        .mission-card:before,
+        .vision-card:before {
             content: '';
             position: absolute;
             top: 0;
@@ -281,12 +340,16 @@
             background: linear-gradient(135deg, #387C01, #4A9C01);
         }
 
-        .mission-card:hover, .vision-card:hover {
+
+        .mission-card:hover,
+        .vision-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .mission-card h3, .vision-card h3 {
+
+        .mission-card h3,
+        .vision-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             color: #387C01;
@@ -294,7 +357,9 @@
             position: relative;
         }
 
-        .mission-card h3:after, .vision-card h3:after {
+
+        .mission-card h3:after,
+        .vision-card h3:after {
             content: '';
             position: absolute;
             bottom: -10px;
@@ -305,11 +370,13 @@
             border-radius: 2px;
         }
 
+
         /* Origin Section - Updated with FPT Can Tho Map */
         .origin {
             background: #ffffff;
             position: relative;
         }
+
 
         .origin-content {
             display: grid;
@@ -318,14 +385,16 @@
             align-items: center;
         }
 
+
         .origin-map {
             width: 100%;
             height: 380px;
             border-radius: 20px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
+
 
         .origin-map iframe {
             width: 100%;
@@ -334,24 +403,27 @@
             border-radius: 20px;
         }
 
+
         .map-label {
             position: absolute;
             top: 10px;
             left: 10px;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             color: #387C01;
             padding: 10px 15px;
             border-radius: 15px;
             font-size: 0.9rem;
             font-weight: 600;
             z-index: 1;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
 
         /* Enhanced Story Section */
         .story {
             background: #FFFFFF;
         }
+
 
         .story-content {
             display: grid;
@@ -359,6 +431,7 @@
             gap: 3rem;
             align-items: center;
         }
+
 
         .story-image {
             width: 100%;
@@ -372,8 +445,9 @@
             font-size: 3rem;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
+
 
         .story-image::before {
             content: '🌴';
@@ -384,6 +458,7 @@
             animation: sway 4s ease-in-out infinite;
         }
 
+
         .story-image::after {
             content: '🍃';
             font-size: 2rem;
@@ -393,10 +468,21 @@
             animation: leafFloat 3s ease-in-out infinite reverse;
         }
 
+
         @keyframes sway {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(3deg); }
+
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+
+            50% {
+                transform: rotate(3deg);
+            }
         }
+
 
         .story-text h2 {
             font-family: 'Playfair Display', serif;
@@ -406,6 +492,7 @@
             font-weight: 600;
         }
 
+
         .story-text p {
             margin-bottom: 1.2rem;
             font-size: 1.15rem;
@@ -413,10 +500,12 @@
             color: #555;
         }
 
+
         /* Product Highlights */
         .product-highlights {
             background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
         }
+
 
         .section-title {
             text-align: center;
@@ -427,6 +516,7 @@
             font-weight: 600;
         }
 
+
         .highlights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -434,16 +524,18 @@
             margin-top: 2rem;
         }
 
+
         .highlight-box {
             background: white;
             padding: 2rem;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
         }
+
 
         .highlight-box:before {
             content: '';
@@ -452,18 +544,21 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(56,124,1,0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(56, 124, 1, 0.1), transparent);
             transition: left 0.5s;
         }
 
+
         .highlight-box:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
+
 
         .highlight-box:hover:before {
             left: 100%;
         }
+
 
         .highlight-icon {
             width: 70px;
@@ -479,9 +574,11 @@
             transition: all 0.3s;
         }
 
+
         .highlight-box:hover .highlight-icon {
             transform: scale(1.1) rotate(10deg);
         }
+
 
         .highlight-box h3 {
             color: #387C01;
@@ -490,11 +587,13 @@
             font-weight: 600;
         }
 
+
         /* Testimonials Section */
         .testimonials {
             background: #ffffff;
             padding: 60px 0;
         }
+
 
         .testimonials-grid {
             display: grid;
@@ -503,18 +602,21 @@
             margin-top: 2rem;
         }
 
+
         .testimonial-card {
             background: #f8f9fa;
             padding: 1.5rem;
             border-radius: 20px;
             position: relative;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
+
 
         .testimonial-card:hover {
             transform: translateY(-5px);
         }
+
 
         .testimonial-card:before {
             content: '"';
@@ -527,6 +629,7 @@
             font-family: serif;
         }
 
+
         .testimonial-text {
             font-style: italic;
             margin-bottom: 1rem;
@@ -534,11 +637,13 @@
             color: #555;
         }
 
+
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
+
 
         .author-avatar {
             width: 50px;
@@ -553,20 +658,24 @@
             font-size: 1.2rem;
         }
 
+
         .author-info h4 {
             color: #387C01;
             margin-bottom: 0.2rem;
         }
+
 
         .author-info p {
             color: #888;
             font-size: 0.9rem;
         }
 
+
         /* Benefits Section */
         .benefits {
             background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
         }
+
 
         .benefits-grid {
             display: grid;
@@ -575,18 +684,21 @@
             margin-top: 2rem;
         }
 
+
         .benefit-item {
             text-align: center;
             padding: 1.5rem;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
+
 
         .benefit-item:hover {
             transform: translateY(-5px);
         }
+
 
         .benefit-icon {
             width: 80px;
@@ -602,9 +714,11 @@
             transition: all 0.3s;
         }
 
+
         .benefit-item:hover .benefit-icon {
             transform: rotate(360deg) scale(1.1);
         }
+
 
         /* Contact Form */
         .contact-form {
@@ -612,18 +726,21 @@
             padding: 60px 0;
         }
 
+
         .form-container {
             max-width: 600px;
             margin: 0 auto;
             background: #f8f9fa;
             padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
+
 
         .form-group {
             margin-bottom: 1.2rem;
         }
+
 
         .form-group label {
             display: block;
@@ -631,6 +748,7 @@
             color: #387C01;
             font-weight: 600;
         }
+
 
         .form-group input,
         .form-group textarea {
@@ -642,12 +760,14 @@
             transition: all 0.3s;
         }
 
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: #387C01;
-            box-shadow: 0 0 0 3px rgba(56,124,1,0.1);
+            box-shadow: 0 0 0 3px rgba(56, 124, 1, 0.1);
         }
+
 
         .submit-btn {
             background: linear-gradient(135deg, #387C01, #2E6B01);
@@ -662,10 +782,12 @@
             width: 100%;
         }
 
+
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(56,124,1,0.3);
+            box-shadow: 0 8px 25px rgba(56, 124, 1, 0.3);
         }
+
 
         /* Enhanced Footer */
         .footer {
@@ -675,6 +797,7 @@
             position: relative;
             overflow: hidden;
         }
+
 
         .footer:before {
             content: '';
@@ -687,6 +810,7 @@
             background-size: 200px 100px;
         }
 
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -696,6 +820,7 @@
             z-index: 1;
         }
 
+
         .footer-section h3 {
             margin-bottom: 1rem;
             color: #FFEB3B;
@@ -703,16 +828,19 @@
             font-size: 1.3rem;
         }
 
+
         .footer-section a {
             text-decoration: none;
             color: #ffffff;
             transition: color 0.3s;
         }
 
+
         .footer-section a:hover {
             color: #FFEB3B;
             text-decoration: underline;
         }
+
 
         .social-icons {
             display: flex;
@@ -720,10 +848,11 @@
             margin-top: 1rem;
         }
 
+
         .social-icon {
             width: 45px;
             height: 45px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -733,20 +862,23 @@
             backdrop-filter: blur(10px);
         }
 
+
         .social-icon:hover {
             background: #FFEB3B;
             color: #387C01;
             transform: translateY(-3px);
         }
 
+
         .footer-bottom {
             text-align: center;
             padding-top: 1.5rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            color: rgba(255,255,255,0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
             position: relative;
             z-index: 1;
         }
+
 
         /* Mobile Menu */
         .mobile-menu-toggle {
@@ -759,9 +891,11 @@
             transition: all 0.3s;
         }
 
+
         .mobile-menu-toggle:hover {
             transform: scale(1.1);
         }
+
 
         .mobile-menu {
             display: none;
@@ -770,35 +904,42 @@
             left: 0;
             width: 100%;
             background: rgba(56, 124, 1, 0.95);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
             z-index: 999;
             border-radius: 0 0 15px 15px;
         }
+
 
         .mobile-menu.active {
             display: block;
             animation: slideDown 0.3s ease-out;
         }
 
+
         @keyframes slideDown {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
+
         .mobile-menu ul {
             list-style: none;
             padding: 1rem 0;
         }
 
+
         .mobile-menu li {
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
 
         .mobile-menu a {
             display: block;
@@ -809,11 +950,13 @@
             transition: all 0.3s;
         }
 
+
         .mobile-menu a:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             color: #FFEB3B;
             padding-left: 2.5rem;
         }
+
 
         /* Animation utilities */
         .fade-in {
@@ -822,10 +965,12 @@
             transition: all 0.8s ease;
         }
 
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
 
         .slide-in-left {
             opacity: 0;
@@ -833,10 +978,12 @@
             transition: all 0.8s ease;
         }
 
+
         .slide-in-left.visible {
             opacity: 1;
             transform: translateX(0);
         }
+
 
         .slide-in-right {
             opacity: 0;
@@ -844,10 +991,12 @@
             transition: all 0.8s ease;
         }
 
+
         .slide-in-right.visible {
             opacity: 1;
             transform: translateX(0);
         }
+
 
         /* Responsive Design */
         @media (max-width: 1024px) {
@@ -855,41 +1004,52 @@
                 padding: 0 1.5rem;
             }
 
+
             .nav-container {
                 padding: 0 1.5rem;
             }
 
+
             .hero-content h1 {
                 font-size: 3.2rem;
             }
+
 
             .section-title {
                 font-size: 2.2rem;
             }
         }
 
+
         @media (max-width: 768px) {
+
+
             /* Header Mobile */
             .nav-menu {
                 display: none;
             }
 
+
             .mobile-menu-toggle {
                 display: block;
             }
+
 
             .nav-container {
                 padding: 0 1rem;
             }
 
+
             .brand-name {
                 font-size: 24px;
             }
+
 
             .logo img {
                 width: 55px;
                 height: 55px;
             }
+
 
             /* Hero Mobile */
             .hero {
@@ -898,11 +1058,13 @@
                 background-attachment: scroll;
             }
 
+
             .hero-content h1 {
                 font-size: 2.8rem;
                 line-height: 1.2;
                 margin-bottom: 1rem;
             }
+
 
             .hero-content p {
                 font-size: 1.2rem;
@@ -910,19 +1072,23 @@
                 line-height: 1.6;
             }
 
+
             .cta-button {
                 padding: 15px 30px;
                 font-size: 1.1rem;
             }
+
 
             /* Sections Mobile */
             .section {
                 padding: 50px 0;
             }
 
+
             .container {
                 padding: 0 1rem;
             }
+
 
             .section-title {
                 font-size: 2rem;
@@ -930,19 +1096,25 @@
                 line-height: 1.3;
             }
 
+
             /* Mission & Vision Mobile */
             .mission-vision-content {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
 
-            .mission-card, .vision-card {
+
+            .mission-card,
+            .vision-card {
                 padding: 1.5rem;
             }
 
-            .mission-card h3, .vision-card h3 {
+
+            .mission-card h3,
+            .vision-card h3 {
                 font-size: 1.5rem;
             }
+
 
             /* Origin Mobile */
             .origin-content {
@@ -950,15 +1122,18 @@
                 gap: 2.5rem;
             }
 
+
             .origin-map {
                 height: 280px;
                 order: -1;
             }
 
+
             .map-label {
                 font-size: 0.8rem;
                 padding: 8px 12px;
             }
+
 
             /* Story Mobile */
             .story-content {
@@ -966,10 +1141,12 @@
                 gap: 2rem;
             }
 
+
             .story-image {
                 height: 260px;
                 order: -1;
             }
+
 
             .story-text h2 {
                 font-size: 2rem;
@@ -977,11 +1154,13 @@
                 text-align: center;
             }
 
+
             .story-text p {
                 font-size: 1.1rem;
                 margin-bottom: 1rem;
                 text-align: justify;
             }
+
 
             /* Highlights Mobile */
             .highlights-grid {
@@ -990,9 +1169,11 @@
                 margin-top: 1.5rem;
             }
 
+
             .highlight-box {
                 padding: 1.5rem;
             }
+
 
             .highlight-icon {
                 width: 60px;
@@ -1000,13 +1181,16 @@
                 font-size: 1.6rem;
             }
 
+
             .highlight-box h3 {
                 font-size: 1.2rem;
             }
 
+
             .highlight-box p {
                 font-size: 1rem;
             }
+
 
             /* Testimonials Mobile */
             .testimonials-grid {
@@ -1014,9 +1198,11 @@
                 gap: 1rem;
             }
 
+
             .testimonial-card {
                 padding: 1.2rem;
             }
+
 
             /* Benefits Mobile */
             .benefits-grid {
@@ -1025,9 +1211,11 @@
                 margin-top: 1.5rem;
             }
 
+
             .benefit-item {
                 padding: 1.2rem;
             }
+
 
             .benefit-icon {
                 width: 60px;
@@ -1036,15 +1224,18 @@
                 margin-bottom: 0.8rem;
             }
 
+
             .benefit-item h4 {
                 font-size: 1rem;
                 margin-bottom: 0.5rem;
             }
 
+
             .benefit-item p {
                 font-size: 0.9rem;
                 line-height: 1.4;
             }
+
 
             /* Contact Form Mobile */
             .form-container {
@@ -1052,10 +1243,12 @@
                 margin: 0 1rem;
             }
 
+
             /* Footer Mobile */
             .footer {
                 padding: 2.5rem 0 1.2rem;
             }
+
 
             .footer-content {
                 grid-template-columns: 1fr;
@@ -1063,20 +1256,24 @@
                 text-align: center;
             }
 
+
             .footer-section h3 {
                 margin-bottom: 0.8rem;
                 font-size: 1.2rem;
             }
+
 
             .footer-section p {
                 font-size: 0.95rem;
                 margin-bottom: 0.4rem;
             }
 
+
             .social-icons {
                 justify-content: center;
                 margin-top: 0.8rem;
             }
+
 
             .social-icon {
                 width: 40px;
@@ -1084,11 +1281,13 @@
                 font-size: 1rem;
             }
 
+
             .footer-bottom {
                 font-size: 0.9rem;
                 padding-top: 1.2rem;
             }
         }
+
 
         /* Small Mobile (Portrait) */
         @media (max-width: 480px) {
@@ -1096,60 +1295,76 @@
                 font-size: 2.4rem;
             }
 
+
             .hero-content p {
                 font-size: 1.1rem;
             }
+
 
             .section-title {
                 font-size: 1.8rem;
             }
 
+
             .story-text h2 {
                 font-size: 1.8rem;
             }
+
 
             .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 1.2rem;
             }
 
+
             .benefit-item {
                 padding: 1rem;
             }
 
+
             .highlight-box {
                 padding: 1.2rem;
             }
+
 
             .cta-button {
                 padding: 12px 25px;
                 font-size: 1rem;
             }
 
-            .mission-card, .vision-card {
+
+            .mission-card,
+            .vision-card {
                 padding: 1.2rem;
             }
+
 
             .form-container {
                 padding: 1.2rem;
             }
 
+
             .origin-map {
                 height: 250px;
             }
+
 
             .logo img {
                 width: 50px;
                 height: 50px;
             }
 
+
             .brand-name {
                 font-size: 22px;
             }
         }
 
+
         /* Touch-friendly improvements */
         @media (hover: none) and (pointer: coarse) {
+
+
             .cta-button,
             .highlight-box,
             .benefit-item,
@@ -1157,9 +1372,11 @@
                 transition: none;
             }
 
+
             .cta-button:active {
                 transform: scale(0.98);
             }
+
 
             .highlight-box:active,
             .testimonial-card:active {
@@ -1167,31 +1384,24 @@
             }
         }
 
+
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
     </style>
 </head>
+
+
 <body>
-<!-- Header -->
-<header class="header">
-    <nav class="nav-container">
-        <div class="logo">
-            <img src="img/logo2.png" alt="Logo" width="70">
-            <span class="brand-name">PAMI TEA</span>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#home">Trang chủ</a></li>
-            <li><a href="#mission">Sứ mệnh</a></li>
-            <li><a href="#story">Câu chuyện</a></li>
-            <li><a href="#products">Sản phẩm</a></li>
-            <li><a href="#testimonials">Cảm nhận</a></li>
-            <li><a href="#contact">Liên hệ</a></li>
-        </ul>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="img/logo2.png" alt="Logo" width="70">
+                <span class="brand-name">PAMI TEA</span>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home">Trang chủ</a></li>
                 <li><a href="#mission">Sứ mệnh</a></li>
                 <li><a href="#story">Câu chuyện</a></li>
@@ -1199,327 +1409,812 @@
                 <li><a href="#testimonials">Cảm nhận</a></li>
                 <li><a href="#contact">Liên hệ</a></li>
             </ul>
-        </div>
-    </nav>
-</header>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <h1>PAMI TEA</h1>
-        <p>Thanh mát từ thiên nhiên<br>
-            Thuần khiết từ đất trời miền Tây, mang lại sự an yên cho tâm hồn</p>
-        <a href="#story" class="cta-button">Khám phá ngay</a>
-    </div>
-</section>
-
-<!-- Mission & Vision Section -->
-<section id="mission" class="section mission-vision">
-    <div class="container">
-        <h2 class="section-title fade-in">Sứ Mệnh & Tầm Nhìn</h2>
-        <div class="mission-vision-content">
-            <div class="mission-card slide-in-left">
-                <h3>🎯 Sứ Mệnh</h3>
-                <p>Mang đến cho mọi gia đình Việt Nam sản phẩm PAMI TEA thuần khiết, an toàn và giàu probiotics. Chúng tôi cam kết bảo vệ sức khỏe cộng đồng thông qua những ly trà lên men tự nhiên, góp phần xây dựng lối sống healthy và bền vững.</p>
-                <p>Đồng hành cùng nông dân miền Tây trong việc phát triển kinh tế bền vững, tạo ra chuỗi giá trị từ thiên nhiên đến người tiêu dùng một cách minh bạch và công bằng.</p>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#mission">Sứ mệnh</a></li>
+                    <li><a href="#story">Câu chuyện</a></li>
+                    <li><a href="#products">Sản phẩm</a></li>
+                    <li><a href="#testimonials">Cảm nhận</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
             </div>
-            <div class="vision-card slide-in-right">
-                <h3>🌟 Tầm Nhìn</h3>
-                <p>Trở thành thương hiệu trà lên men hàng đầu Việt Nam, được tin tưởng bởi chất lượng vượt trội và giá trị nhân văn. Chúng tôi hướng tới tương lai nơi mỗi gia đình đều có thể thưởng thức những sản phẩm thiên nhiên tốt nhất.</p>
-                <p>Mở rộng ra thị trường quốc tế, giới thiệu văn hóa trà Việt Nam và những giá trị tốt đẹp của vùng đất miền Tây Nam Bộ đến bạn bè khắp thế giới.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Origin Section - Updated with FPT Can Tho Map -->
-<section class="section origin">
-    <div class="container">
-        <h2 class="section-title fade-in">Nguồn Gốc Nguyên Liệu</h2>
-        <div class="origin-content">
-            <div class="origin-map slide-in-left">
-                <div class="map-label">📍 FPT Cần Thơ<br>Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần Thơ</div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="slide-in-right">
-                <h3 style="font-family: 'Playfair Display', serif; color: #387C01; font-size: 2rem; margin-bottom: 1.2rem;">🌍 Vùng Đất Phù Sa Màu Mỡ</h3>
-                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
-                    PAMI TEA của chúng tôi có nguồn gốc từ những vùng đất phù sa màu mỡ nhất của đồng bằng sông Cửu Long. Nơi đây, khí hậu nhiệt đới ẩm, độ ẩm cao và nguồn nước ngọt dồi dào tạo nên điều kiện lý tưởng cho cây thốt nốt phát triển.
-                </p>
-                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
-                    Chúng tôi hợp tác trực tiếp với các gia đình nông dân địa phương có nhiều thế hệ kinh nghiệm trồng và chăm sóc cây thốt nốt. Mỗi cây thốt nốt được chọn lọc kỹ càng, chỉ thu hoạch khi đạt độ chín tối ưu.
-                </p>
-                <div style="background: #f8f9fa; padding: 1.2rem; border-radius: 15px; border-left: 4px solid #387C01;">
-                    <h4 style="color: #387C01; margin-bottom: 0.8rem;">📍 Khu vực thu hoạch chính:</h4>
-                    <ul style="color: #666; line-height: 1.5;">
-                        <li>Cần Thơ - Trung tâm đồng bằng sông Cửu Long, gần FPT</li>
-                        <li>An Giang - Vùng đất trù phú, gần FPT Can Tho</li>
-                        <li>Kiên Giang - Gần biển, gần FPT Can Tho</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Story Section -->
-<section id="story" class="section story">
-    <div class="container">
-        <div class="story-content">
-            <div class="story-image slide-in-left">
-                <span style="font-size: 1.5rem; text-align: center;">Cây Thốt Nốt<br>Miền Tây</span>
-            </div>
-            <div class="story-text slide-in-right">
-                <h2>Hành trình của PAMI TEA</h2>
-                <p>Từ những vùng đất phù sa màu mỡ của miền Tây Nam Bộ, nơi những cây thốt nốt cao vút vươn mình trong nắng vàng và gió mát, chúng tôi mang đến cho bạn sản phẩm PAMI TEA thuần khiết nhất.</p>
-                <p>Thốt nốt không chỉ là một loại cây quen thuộc của người dân miền Tây, mà còn là báu vật thiên nhiên với nhiều giá trị dinh dưỡng quý báu. Sự lựa chọn thốt nốt làm nguyên liệu chính xuất phát từ tình yêu với thiên nhiên sạch và mong muốn mang lại sức khỏe tối ưu cho mọi người.</p>
-                <p>Chúng tôi tin rằng, mỗi tách trà không chỉ là thức uống giải khát, mà là cầu nối giữa con người với thiên nhiên, là khoảnh khắc bình yên trong cuộc sống hối hả, và là sự gắn kết ấm áp giữa những người thân yêu.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Product Highlights -->
-<section id="products" class="section product-highlights">
-    <div class="container">
-        <h2 class="section-title fade-in">Điểm Nổi Bật Sản Phẩm</h2>
-        <div class="highlights-grid">
-            <div class="highlight-box fade-in">
-                <div class="highlight-icon">🌱</div>
-                <h3>Nguyên Liệu Sạch</h3>
-                <p>100% từ cây thốt nốt tự nhiên, không chất bảo quản, không hóa chất độc hại. Được chứng nhận an toàn thực phẩm.</p>
-            </div>
-            <div class="highlight-box fade-in">
-                <div class="highlight-icon">🍃</div>
-                <h3>Quy Trình Lên Men Tự Nhiên</h3>
-                <p>Lên men tự nhiên với probiotics, giữ nguyên hương vị và dưỡng chất. Công nghệ hiện đại kết hợp truyền thống.</p>
-            </div>
-            <div class="highlight-box fade-in">
-                <div class="highlight-icon">🌸</div>
-                <h3>Hương Vị Thanh Mát</h3>
-                <p>Vị ngọt tự nhiên từ nhựa thốt nốt, thanh mát, dễ uống, phù hợp với khí hậu nhiệt đới. Hương thơm đặc trưng của thiên nhiên.</p>
-            </div>
-            <div class="highlight-box fade-in">
-                <div class="highlight-icon">💚</div>
-                <h3>Tốt Cho Sức Khỏe</h3>
-                <p>Giàu probiotics, vitamin, khoáng chất, hỗ trợ tiêu hóa và tăng cường sức đề kháng. Phù hợp cho mọi lứa tuổi.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="section testimonials">
-    <div class="container">
-        <h2 class="section-title fade-in">Cảm Nhận Của Khách Hàng</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <p class="testimonial-text">
-                    "PAMI TEA thực sự rất tuyệt! Vị ngọt tự nhiên từ nhựa thốt nốt, không gắt như các loại trà khác. Con tôi rất thích uống, và tôi yên tâm vì biết đây là sản phẩm an toàn, giàu probiotics."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">H</div>
-                    <div class="author-info">
-                        <h4>Chị Hương</h4>
-                        <p>Mẹ của 2 con - Hồ Chí Minh</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <p class="testimonial-text">
-                    "Làm việc căng thẳng cả ngày, về nhà được thưởng thức tách PAMI TEA ấm áp là điều tuyệt vời nhất. Cảm giác thư thái, thanh mát và rất dễ ngủ."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">T</div>
-                    <div class="author-info">
-                        <h4>Anh Tuấn</h4>
-                        <p>Nhân viên văn phòng - Hà Nội</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <p class="testimonial-text">
-                    "Tôi đã uống nhiều loại trà lên men khác nhưng PAMI TEA có hương vị rất đặc biệt. Ngọt thanh, thơm tự nhiên và cảm giác rất healthy."
-                </p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">L</div>
-                    <div class="author-info">
-                        <h4>Cô Linh</h4>
-                        <p>Giáo viên - Đà Nẵng</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="section benefits">
-    <div class="container">
-        <h2 class="section-title fade-in">PAMI TEA Mang Lại Gì Cho Bạn?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">🧘</div>
-                <h4>Thanh Lọc Cơ Thể</h4>
-                <p>Hỗ trợ giải độc, làm sạch cơ thể từ bên trong, cải thiện tuần hoàn máu</p>
-            </div>
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">⚡</div>
-                <h4>Tăng Cường Năng Lượng</h4>
-                <p>Cung cấp năng lượng tự nhiên, giúp cơ thể khỏe khoắn và tinh thần sảng khoái</p>
-            </div>
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">🍯</div>
-                <h4>Giàu Probiotics</h4>
-                <p>Bổ sung probiotics và khoáng chất thiết yếu, tăng cường hệ miễn dịch</p>
-            </div>
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">👨‍👩‍👧‍👦</div>
-                <h4>An Toàn Cho Mọi Lứa Tuổi</h4>
-                <p>Phù hợp từ trẻ em đến người cao tuổi, không gây tác dụng phụ</p>
-            </div>
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">😌</div>
-                <h4>Thư Giãn Tâm Trí</h4>
-                <p>Giúp giảm stress, mang lại cảm giác bình yên và thư thái</p>
-            </div>
-            <div class="benefit-item fade-in">
-                <div class="benefit-icon">🌡️</div>
-                <h4>Mát Gan, Giải Nhiệt</h4>
-                <p>Đặc biệt phù hợp với khí hậu nóng ẩm, giúp cơ thể mát mẻ</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Form Section -->
-<section id="contact" class="section contact-form">
-    <div class="container">
-        <h2 class="section-title fade-in">Liên Hệ Với Chúng Tôi</h2>
-        <div class="form-container fade-in">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Họ và tên *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Số điện thoại</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="message">Nội dung *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Chia sẻ với chúng tôi những gì bạn muốn biết về PAMI TEA..."></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Gửi liên hệ</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Liên Hệ</h3>
-                <p>📍 Địa chỉ: FPT Cần Thơ, Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần Thơ</p>
-                <p>📞 Điện thoại: 0123 456 789</p>
-                <p>✉️ Email: info@tramitea.vn</p>
-                <p>🕒 Giờ làm việc: 8:00 - 17:00 (Thứ 2 - Chủ nhật)</p>
-            </div>
-            <div class="footer-section">
-                <h3>Kết Nối Với Chúng Tôi</h3>
-                <div class="social-icons">
-                    <div class="social-icon" title="Facebook">📘</div>
-                    <div class="social-icon" title="Instagram">📷</div>
-                    <div class="social-icon" title="YouTube">📺</div>
-                    <div class="social-icon" title="TikTok">🎵</div>
-                </div>
-                <p style="margin-top: 1rem;">Theo dõi chúng tôi để cập nhật thông tin mới nhất về sản phẩm và khuyến mãi!</p>
-            </div>
-            <div class="footer-section">
-                <h3>Thông Tin Hữu Ích</h3>
-                <p><a href="#story">Về chúng tôi</a></p>
-                <p><a href="#products">Sản phẩm</a></p>
-                <p><a href="#">Chính sách bảo mật</a></p>
-                <p><a href="#">Điều khoản sử dụng</a></p>
-            </div>
-            <div class="footer-section">
-                <h3>Bản Đồ Cửa Hàng</h3>
-                <div style="width: 100%; height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 1rem;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s" style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <p>Ghé thăm cửa hàng của chúng tôi tại Đại học FPT Cần Thơ để trải nghiệm trực tiếp!</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 PAMI TEA. Tất cả quyền được bảo lưu. | Thiết kế bởi Nature Tea Co.</p>
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Mobile menu functionality
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        mobileMenuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
-    });
-
-    // Close mobile menu when clicking on links
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            mobileMenuToggle.textContent = '☰';
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove('active');
-            mobileMenuToggle.textContent = '☰';
+        </nav>
+    </header>
+    <!-- ================================================
+     BƯỚC 1: Dán CSS vào trong <style> hiện có
+     ================================================ -->
+    <style>
+        /* ===== PAMI CAROUSEL — clone từ file JSP ===== */
+        .pami-carousel-section {
+            background: #dee7dd;
+            padding: 80px 0 60px 0;
+            overflow: hidden;
+            position: relative;
+            margin-top: 4%;
         }
-    });
 
-    // Smooth scrolling for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({
-                behavior: 'smooth'
+
+        .pami-swiper {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 80px;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+
+        /* LEFT */
+        .pami-content-wrapper {
+            flex: 0 0 40%;
+            z-index: 10;
+        }
+
+
+        .pami-content {
+            color: #000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+
+        .pami-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+
+
+        .pami-content .pami-divider {
+            width: 40px;
+            height: 2px;
+            background: #387C01;
+            margin: 0 0 16px 0;
+        }
+
+
+        .pami-content p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+
+        .pami-content p strong {
+            color: #111;
+            font-weight: 600;
+        }
+
+
+        /* RIGHT */
+        .pami-images-wrapper {
+            flex: 0 0 50%;
+            position: relative;
+            height: 420px;
+            overflow: visible;
+        }
+
+
+        #pamiSlide {
+            width: 100%;
+            position: relative;
+            height: 100%;
+        }
+
+
+        .pami-hero-slide {
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            transition: all 0.5s ease;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .pami-hero {
+            position: relative;
+            overflow: visible;
+            padding-bottom: 60px;
+        }
+
+
+        /* Slide chính */
+        .pami-hero-slide:nth-child(1) {
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* Slide phụ nhô bên phải */
+        .pami-hero-slide:nth-child(2) {
+            left: calc(100% + 30px);
+            width: 66.67%;
+            height: 66.67%;
+            z-index: 2;
+            opacity: 0.85;
+            cursor: pointer;
+        }
+
+
+        .pami-hero-slide:nth-child(2):hover {
+            opacity: 1;
+            transform: translate(0, -50%) scale(1.02);
+        }
+
+
+        /* Ẩn các slide còn lại */
+        .pami-hero-slide:nth-child(n+3) {
+            left: calc(100% + 500px);
+            width: 66.67%;
+            height: 66.67%;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+
+        /* Dots */
+        .pami-carousel {
+            position: relative;
+            overflow: visible;
+            padding-bottom: 50px;
+        }
+
+
+        .pami-pagination {
+            position: absolute;
+
+
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+            bottom: 20px;
+        }
+
+
+        .pami-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+
+        .pami-pagination-bullet.active {
+            background: #387C01;
+            border-color: #387C01;
+            transform: scale(1.3);
+            box-shadow: 0 0 12px rgba(56, 124, 1, 0.5);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .pami-swiper {
+                padding: 0 40px;
+            }
+
+
+            .pami-images-wrapper {
+                height: 360px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .pami-swiper {
+                flex-direction: column;
+                padding: 0 20px;
+                gap: 28px;
+            }
+
+
+            .pami-content-wrapper {
+                flex: 1;
+                width: 100%;
+            }
+
+
+            .pami-images-wrapper {
+                flex: 1;
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+            }
+
+
+            .pami-hero-slide:nth-child(2) {
+                left: calc(100% - 60px);
+                opacity: 0.7;
+                width: 50%;
+                height: 50%;
+            }
+
+
+            .pami-content h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+
+
+
+    <!-- ================================================
+     BƯỚC 2: Dán HTML này vào TRƯỚC <!-- Footer -->
+    ================================================ -->
+    <section class="pami-carousel-section">
+        <div class="pami-swiper">
+
+
+            <!-- LEFT: Text -->
+            <div class="pami-content-wrapper">
+                <div class="pami-content" id="pamiContent">
+                    <h2 id="pami-title">📢 PAMI TEA SẮP "ĐỔ BỘ" TẠI SẢNH GAMMA!</h2>
+                    <div class="pami-divider"></div>
+                    <p id="pami-desc">Pami Tea đang chuẩn bị mang trà thốt nốt lên men từ An Giang đến sảnh Gamma — một
+                        gian
+                        hàng nhỏ để bạn dừng chân, giải khát và khám phá hương vị mộc mạc.</p>
+                    <p><strong>📍 Địa điểm:</strong> <span id="pami-location">Sảnh Gamma — Đại học FPT phân hiệu Cần
+                            Thơ</span></p>
+                    <p><strong>⏰ Thời gian:</strong> <span id="pami-time">12:00 – 16:00, ngày 12/03/2026</span></p>
+                </div>
+            </div>
+
+
+            <!-- RIGHT: Slides -->
+            <div class="pami-images-wrapper">
+                <div id="pamiSlide">
+                    <div class="pami-hero-slide" style="background-image: url('img/banner1.jpg')"
+                        data-title='📢 PAMI TEA SẮP "ĐỔ BỘ" TẠI SẢNH GAMMA!'
+                        data-desc="Pami Tea đang chuẩn bị mang trà thốt nốt lên men từ An Giang đến sảnh Gamma — một gian hàng nhỏ để bạn dừng chân, giải khát và khám phá hương vị mộc mạc."
+                        data-location="Sảnh Gamma — Đại học FPT phân hiệu Cần Thơ"
+                        data-time="12:00 – 16:00, ngày 12/03/2026">
+                    </div>
+                    <div class="pami-hero-slide" style="background-image: url('img/banner2.jpg')"
+                        data-title="♻️ ĐỔI VỎ NHẬN QUÀ — LAN TỎA LỐI SỐNG XANH"
+                        data-desc='Pami Tea mang đến hoạt động "Gom vỏ đổi quà" — bắt đầu từ những hành động nhỏ nhưng ý nghĩa cùng lan tỏa lối sống xanh.'
+                        data-location="Gian hàng Pami Tea — Sảnh Gamma, ĐH FPT Cần Thơ"
+                        data-time="13:00 – 16:00, ngày 12/03/2026">
+                    </div>
+                    <div class="pami-hero-slide" style="background-image: url('img/banner3.jpg')"
+                        data-title="🔥 CHỈ CÒN 24H NỮA — GAMMA ƠI, PAMI TEA ĐẾN ĐÂY!"
+                        data-desc="Mọi công đoạn chuẩn bị cuối cùng đang được hoàn thiện. Những mẻ trà lên men thơm ngon nhất đã sẵn sàng để lên sóng!"
+                        data-location="Sảnh Gamma — ĐH FPT phân hiệu Cần Thơ"
+                        data-time="13:00 – 16:00, ngày 12/03/2026">
+                    </div>
+                </div>
+
+
+                <!-- Dots nằm dưới image wrapper -->
+
+
+            </div>
+            <div class="pami-pagination" id="pamiPagination"></div>
+        </div>
+    </section>
+
+
+    <!-- ================================================
+     BƯỚC 3: Dán JS này vào TRƯỚC </script> cuối file
+     ================================================ -->
+    <script>
+        (function () {
+            const slideContainer = document.getElementById('pamiSlide');
+            const pagination = document.getElementById('pamiPagination');
+            const contentEl = document.getElementById('pamiContent');
+            let autoPlay;
+
+
+            function getSlides() {
+                return Array.from(slideContainer.querySelectorAll('.pami-hero-slide'));
+            }
+
+
+            function createDots() {
+                pagination.innerHTML = '';
+                getSlides().forEach((_, i) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'pami-pagination-bullet';
+                    dot.addEventListener('click', () => {
+                        clearInterval(autoPlay);
+                        goTo(i);
+                        start();
+                    });
+                    pagination.appendChild(dot);
+                });
+                syncDots();
+            }
+
+
+            function syncDots() {
+                const slides = getSlides();
+                const dots = pagination.querySelectorAll('.pami-pagination-bullet');
+
+
+                const activeIndex = parseInt(slides[0].dataset.idx);
+
+
+                dots.forEach((d, i) => {
+                    d.classList.toggle('active', i === activeIndex);
+                });
+            }
+
+
+            function updateContent() {
+                const active = getSlides()[0];
+                if (!active) return;
+
+
+                contentEl.style.opacity = '0';
+                contentEl.style.transform = 'translateY(20px)';
+
+
+                setTimeout(() => {
+                    document.getElementById('pami-title').textContent = active.dataset.title || '';
+                    document.getElementById('pami-desc').textContent = active.dataset.desc || '';
+                    document.getElementById('pami-location').textContent = active.dataset.location || '';
+                    document.getElementById('pami-time').textContent = active.dataset.time || '';
+
+
+                    contentEl.style.opacity = '1';
+                    contentEl.style.transform = 'translateY(0)';
+                }, 200);
+
+
+                syncDots();
+            }
+
+
+            function next() {
+                const slides = getSlides();
+                slideContainer.appendChild(slides[0]);
+                updateContent();
+            }
+
+
+            function prev() {
+                const slides = getSlides();
+                slideContainer.prepend(slides[slides.length - 1]);
+                updateContent();
+            }
+
+
+            function goTo(index) {
+                const slides = getSlides();
+                // Tìm slide có data-idx === index, đếm cần next bao nhiêu bước
+                for (let i = 0; i < slides.length; i++) {
+                    if (parseInt(slides[i].dataset.idx) === index) {
+                        for (let j = 0; j < i; j++) next();
+                        return;
+                    }
+                }
+            }
+
+
+            // Đánh idx gốc
+            getSlides().forEach((s, i) => s.dataset.idx = i);
+
+
+            // Swipe mobile
+            let startX = 0;
+            slideContainer.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+            slideContainer.addEventListener('touchend', e => {
+                const dx = e.changedTouches[0].clientX - startX;
+                if (Math.abs(dx) > 50) {
+                    clearInterval(autoPlay);
+                    dx < 0 ? next() : prev();
+                    start();
+                }
+            });
+
+
+            // Hover pause
+            const swiper = document.querySelector('.pami-swiper');
+            swiper.addEventListener('mouseenter', () => clearInterval(autoPlay));
+            swiper.addEventListener('mouseleave', () => start());
+
+
+            function start() { autoPlay = setInterval(next, 3000); }
+
+
+            createDots();
+            updateContent();
+            start();
+        })();
+    </script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>PAMI TEA</h1>
+            <p>Thanh mát từ thiên nhiên<br>
+                Thuần khiết từ đất trời miền Tây, mang lại sự an yên cho tâm hồn</p>
+            <a href="#story" class="cta-button">Khám phá ngay</a>
+        </div>
+    </section>
+
+
+    <!-- Mission & Vision Section -->
+    <section id="mission" class="section mission-vision">
+        <div class="container">
+            <h2 class="section-title fade-in">Sứ Mệnh & Tầm Nhìn</h2>
+            <div class="mission-vision-content">
+                <div class="mission-card slide-in-left">
+                    <h3>🎯 Sứ Mệnh</h3>
+                    <p>Mang đến cho mọi gia đình Việt Nam sản phẩm PAMI TEA thuần khiết, an toàn và giàu probiotics.
+                        Chúng tôi cam kết bảo vệ sức khỏe cộng đồng thông qua những ly trà lên men tự nhiên, góp phần
+                        xây dựng lối sống healthy và bền vững.</p>
+                    <p>Đồng hành cùng nông dân miền Tây trong việc phát triển kinh tế bền vững, tạo ra chuỗi giá trị từ
+                        thiên nhiên đến người tiêu dùng một cách minh bạch và công bằng.</p>
+                </div>
+                <div class="vision-card slide-in-right">
+                    <h3>🌟 Tầm Nhìn</h3>
+                    <p>Trở thành thương hiệu trà lên men hàng đầu Việt Nam, được tin tưởng bởi chất lượng vượt trội và
+                        giá trị nhân văn. Chúng tôi hướng tới tương lai nơi mỗi gia đình đều có thể thưởng thức những
+                        sản phẩm thiên nhiên tốt nhất.</p>
+                    <p>Mở rộng ra thị trường quốc tế, giới thiệu văn hóa trà Việt Nam và những giá trị tốt đẹp của vùng
+                        đất miền Tây Nam Bộ đến bạn bè khắp thế giới.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Origin Section - Updated with FPT Can Tho Map -->
+    <section class="section origin">
+        <div class="container">
+            <h2 class="section-title fade-in">Nguồn Gốc Nguyên Liệu</h2>
+            <div class="origin-content">
+                <div class="origin-map slide-in-left">
+                    <div class="map-label">📍 FPT Cần Thơ<br>Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh
+                        Kiều, TP. Cần Thơ</div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="slide-in-right">
+                    <h3
+                        style="font-family: 'Playfair Display', serif; color: #387C01; font-size: 2rem; margin-bottom: 1.2rem;">
+                        🌍 Vùng Đất Phù Sa Màu Mỡ</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
+                        PAMI TEA của chúng tôi có nguồn gốc từ những vùng đất phù sa màu mỡ nhất của đồng bằng sông Cửu
+                        Long. Nơi đây, khí hậu nhiệt đới ẩm, độ ẩm cao và nguồn nước ngọt dồi dào tạo nên điều kiện lý
+                        tưởng cho cây thốt nốt phát triển.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.2rem; color: #555;">
+                        Chúng tôi hợp tác trực tiếp với các gia đình nông dân địa phương có nhiều thế hệ kinh nghiệm
+                        trồng và chăm sóc cây thốt nốt. Mỗi cây thốt nốt được chọn lọc kỹ càng, chỉ thu hoạch khi đạt độ
+                        chín tối ưu.
+                    </p>
+                    <div
+                        style="background: #f8f9fa; padding: 1.2rem; border-radius: 15px; border-left: 4px solid #387C01;">
+                        <h4 style="color: #387C01; margin-bottom: 0.8rem;">📍 Khu vực thu hoạch chính:</h4>
+                        <ul style="color: #666; line-height: 1.5;">
+                            <li>Cần Thơ - Trung tâm đồng bằng sông Cửu Long, gần FPT</li>
+                            <li>An Giang - Vùng đất trù phú, gần FPT Can Tho</li>
+                            <li>Kiên Giang - Gần biển, gần FPT Can Tho</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Story Section -->
+    <section id="story" class="section story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image slide-in-left">
+                    <span style="font-size: 1.5rem; text-align: center;">Cây Thốt Nốt<br>Miền Tây</span>
+                </div>
+                <div class="story-text slide-in-right">
+                    <h2>Hành trình của PAMI TEA</h2>
+                    <p>Từ những vùng đất phù sa màu mỡ của miền Tây Nam Bộ, nơi những cây thốt nốt cao vút vươn mình
+                        trong nắng vàng và gió mát, chúng tôi mang đến cho bạn sản phẩm PAMI TEA thuần khiết nhất.</p>
+                    <p>Thốt nốt không chỉ là một loại cây quen thuộc của người dân miền Tây, mà còn là báu vật thiên
+                        nhiên với nhiều giá trị dinh dưỡng quý báu. Sự lựa chọn thốt nốt làm nguyên liệu chính xuất phát
+                        từ tình yêu với thiên nhiên sạch và mong muốn mang lại sức khỏe tối ưu cho mọi người.</p>
+                    <p>Chúng tôi tin rằng, mỗi tách trà không chỉ là thức uống giải khát, mà là cầu nối giữa con người
+                        với thiên nhiên, là khoảnh khắc bình yên trong cuộc sống hối hả, và là sự gắn kết ấm áp giữa
+                        những người thân yêu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Product Highlights -->
+    <section id="products" class="section product-highlights">
+        <div class="container">
+            <h2 class="section-title fade-in">Điểm Nổi Bật Sản Phẩm</h2>
+            <div class="highlights-grid">
+                <div class="highlight-box fade-in">
+                    <div class="highlight-icon">🌱</div>
+                    <h3>Nguyên Liệu Sạch</h3>
+                    <p>100% từ cây thốt nốt tự nhiên, không chất bảo quản, không hóa chất độc hại. Được chứng nhận an
+                        toàn thực phẩm.</p>
+                </div>
+                <div class="highlight-box fade-in">
+                    <div class="highlight-icon">🍃</div>
+                    <h3>Quy Trình Lên Men Tự Nhiên</h3>
+                    <p>Lên men tự nhiên với probiotics, giữ nguyên hương vị và dưỡng chất. Công nghệ hiện đại kết hợp
+                        truyền thống.</p>
+                </div>
+                <div class="highlight-box fade-in">
+                    <div class="highlight-icon">🌸</div>
+                    <h3>Hương Vị Thanh Mát</h3>
+                    <p>Vị ngọt tự nhiên từ nhựa thốt nốt, thanh mát, dễ uống, phù hợp với khí hậu nhiệt đới. Hương thơm
+                        đặc trưng của thiên nhiên.</p>
+                </div>
+                <div class="highlight-box fade-in">
+                    <div class="highlight-icon">💚</div>
+                    <h3>Tốt Cho Sức Khỏe</h3>
+                    <p>Giàu probiotics, vitamin, khoáng chất, hỗ trợ tiêu hóa và tăng cường sức đề kháng. Phù hợp cho
+                        mọi lứa tuổi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">Cảm Nhận Của Khách Hàng</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "PAMI TEA thực sự rất tuyệt! Vị ngọt tự nhiên từ nhựa thốt nốt, không gắt như các loại trà khác.
+                        Con tôi rất thích uống, và tôi yên tâm vì biết đây là sản phẩm an toàn, giàu probiotics."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">H</div>
+                        <div class="author-info">
+                            <h4>Chị Hương</h4>
+                            <p>Mẹ của 2 con - Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Làm việc căng thẳng cả ngày, về nhà được thưởng thức tách PAMI TEA ấm áp là điều tuyệt vời
+                        nhất. Cảm giác thư thái, thanh mát và rất dễ ngủ."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4>Anh Tuấn</h4>
+                            <p>Nhân viên văn phòng - Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">
+                        "Tôi đã uống nhiều loại trà lên men khác nhưng PAMI TEA có hương vị rất đặc biệt. Ngọt thanh,
+                        thơm tự nhiên và cảm giác rất healthy."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">L</div>
+                        <div class="author-info">
+                            <h4>Cô Linh</h4>
+                            <p>Giáo viên - Đà Nẵng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Benefits Section -->
+    <section class="section benefits">
+        <div class="container">
+            <h2 class="section-title fade-in">PAMI TEA Mang Lại Gì Cho Bạn?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">🧘</div>
+                    <h4>Thanh Lọc Cơ Thể</h4>
+                    <p>Hỗ trợ giải độc, làm sạch cơ thể từ bên trong, cải thiện tuần hoàn máu</p>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">⚡</div>
+                    <h4>Tăng Cường Năng Lượng</h4>
+                    <p>Cung cấp năng lượng tự nhiên, giúp cơ thể khỏe khoắn và tinh thần sảng khoái</p>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">🍯</div>
+                    <h4>Giàu Probiotics</h4>
+                    <p>Bổ sung probiotics và khoáng chất thiết yếu, tăng cường hệ miễn dịch</p>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">👨‍👩‍👧‍👦</div>
+                    <h4>An Toàn Cho Mọi Lứa Tuổi</h4>
+                    <p>Phù hợp từ trẻ em đến người cao tuổi, không gây tác dụng phụ</p>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">😌</div>
+                    <h4>Thư Giãn Tâm Trí</h4>
+                    <p>Giúp giảm stress, mang lại cảm giác bình yên và thư thái</p>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">🌡️</div>
+                    <h4>Mát Gan, Giải Nhiệt</h4>
+                    <p>Đặc biệt phù hợp với khí hậu nóng ẩm, giúp cơ thể mát mẻ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section contact-form">
+        <div class="container">
+            <h2 class="section-title fade-in">Liên Hệ Với Chúng Tôi</h2>
+            <div class="form-container fade-in">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Họ và tên *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Chia sẻ với chúng tôi những gì bạn muốn biết về PAMI TEA..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Gửi liên hệ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Liên Hệ</h3>
+                    <p>📍 Địa chỉ: FPT Cần Thơ, Số 600 Đường Nguyễn Văn Cừ (nối dài), P. An Bình, Q. Ninh Kiều, TP. Cần
+                        Thơ</p>
+                    <p>📞 Điện thoại: 0123 456 789</p>
+                    <p>✉️ Email: info@tramitea.vn</p>
+                    <p>🕒 Giờ làm việc: 8:00 - 17:00 (Thứ 2 - Chủ nhật)</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kết Nối Với Chúng Tôi</h3>
+                    <div class="social-icons">
+                        <div class="social-icon" title="Facebook">📘</div>
+                        <div class="social-icon" title="Instagram">📷</div>
+                        <div class="social-icon" title="YouTube">📺</div>
+                        <div class="social-icon" title="TikTok">🎵</div>
+                    </div>
+                    <p style="margin-top: 1rem;">Theo dõi chúng tôi để cập nhật thông tin mới nhất về sản phẩm và khuyến
+                        mãi!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Thông Tin Hữu Ích</h3>
+                    <p><a href="#story">Về chúng tôi</a></p>
+                    <p><a href="#products">Sản phẩm</a></p>
+                    <p><a href="#">Chính sách bảo mật</a></p>
+                    <p><a href="#">Điều khoản sử dụng</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Bản Đồ Cửa Hàng</h3>
+                    <div
+                        style="width: 100%; height: 150px; border-radius: 10px; overflow: hidden; margin-bottom: 1rem;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.841178078586!2d105.7639046147572!3d10.027475992823897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sFPT%20University%20Can%20Tho!5e0!3m2!1svi!2s!4v1690000000000!5m2!1svi!2s"
+                            style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p>Ghé thăm cửa hàng của chúng tôi tại Đại học FPT Cần Thơ để trải nghiệm trực tiếp!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PAMI TEA. Tất cả quyền được bảo lưu. | Thiết kế bởi Nature Tea Co.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            mobileMenuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
             });
         });
-    });
 
-    // Animation on scroll
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
             }
         });
-    }, {
-        threshold: 0.1
-    });
 
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
-        observer.observe(element);
-    });
 
-    // Form submission (basic example)
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.');
-        this.reset();
-    });
-</script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(element => {
+            observer.observe(element);
+        });
+
+
+        // Form submission (basic example)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.');
+            this.reset();
+        });
+
+
+    </script>
 </body>
+
+
 </html>
